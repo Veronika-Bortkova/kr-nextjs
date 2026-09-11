@@ -15,7 +15,7 @@ const MoviesListCardComponent:FC<PropsType> = ({movie, isActive}) => {
     return (
 
             <div className={"listCard"}>
-                <Link href={"/?lastClicked=" + movie.id} className={isActive ? "cardLinkActive" : "cardLink"}>
+                <Link href={"/?id=" + movie.id} className={isActive ? "cardLinkActive" : "cardLink"}>
                      <div className={"top_partCard"}>
 
                         <PosterPreviewComponent poster_path={movie.poster_path} size={"w342"}/>

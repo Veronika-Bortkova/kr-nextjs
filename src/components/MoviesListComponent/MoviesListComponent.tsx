@@ -6,7 +6,7 @@ import SortComponent from "@/src/components/SortComponent/SortComponent";
 
 interface SearchParams {
     page?: string;
-    lastClicked?: string;
+    id?: string;
     sort?: string
 }
 
@@ -14,7 +14,7 @@ const MoviesListComponent = async ({ searchParams }: { searchParams: SearchParam
     const { page } = await searchParams;
     const currentSort = searchParams.sort || "popularity.desc";
     const moviesObj = await getAllMovies(page ||"1", currentSort || "popularity.desc");
-    const lastClickedId = searchParams.lastClicked;
+    const id = searchParams.id;
 
     const movies = moviesObj.results;
 
@@ -25,7 +25,7 @@ const MoviesListComponent = async ({ searchParams }: { searchParams: SearchParam
             <SortComponent searchParams={searchParams} basePath={"/"}/>
 
             <div className={"GridMovieList"}>
-                {movies.map(movie => <MoviesListCardComponent movie={movie} key={movie.id} isActive={lastClickedId === String(movie.id)}/>)}
+                {movies.map(movie => <MoviesListCardComponent movie={movie} key={movie.id} isActive={id === String(movie.id)}/>)}
             </div>
         </div>
     );

@@ -23,7 +23,7 @@ const PaginationComponent:FC<Props> = ({currentPage, pagesFromParent, sort = 'po
             <div className="paginationBlock">
                 <ul className="pagination-container">
 
-                    {/* Кнопка НАЗАД (скрывается на 1 странице) */}
+
                     {currentPage > 1 && (
                         <li className="page-item prev">
                             <Link href={basePath + "?page=" + (currentPage - 1) + "&sort=" + sort } className="page-link">
@@ -32,7 +32,7 @@ const PaginationComponent:FC<Props> = ({currentPage, pagesFromParent, sort = 'po
                         </li>
                     )}
 
-                    {/* Первая страница и троеточие, если мы далеко ушли вперед */}
+
                     {startPage > 1 && (
                         <>
                             <li className="page-item">
@@ -42,7 +42,7 @@ const PaginationComponent:FC<Props> = ({currentPage, pagesFromParent, sort = 'po
                         </>
                     )}
 
-                    {/* Вывод списка номеров страниц */}
+
                     {pageNumbers.map(page => {
                         const isCurrent = page === currentPage;
                         return (
@@ -57,7 +57,7 @@ const PaginationComponent:FC<Props> = ({currentPage, pagesFromParent, sort = 'po
                         );
                     })}
 
-                    {/* Последняя страница и троеточие, если до конца еще далеко */}
+
                     {endPage < totalPages && (
                         <>
                             {endPage < totalPages - 1 && <li className="page-item break">...</li>}
@@ -67,7 +67,7 @@ const PaginationComponent:FC<Props> = ({currentPage, pagesFromParent, sort = 'po
                         </>
                     )}
 
-                    {/* Кнопка ВПЕРЕД (скрывается на последней странице) */}
+
                     {currentPage < totalPages && (
                         <li className="page-item next">
                             <Link href={basePath + "?page=" + (currentPage + 1) + "&sort=" + sort} className="page-link">

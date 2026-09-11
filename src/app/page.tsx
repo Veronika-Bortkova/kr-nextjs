@@ -5,7 +5,7 @@ import MoviesListComponent from "@/src/components/MoviesListComponent/MoviesList
 import PaginationComponent from "@/src/components/PaginationComponent/PaginationComponent";
 type SearchParams = {
     page?: string;
-    lastClicked?: string;
+    id?: string;
     genreId?: string;
     sort?: string
 
