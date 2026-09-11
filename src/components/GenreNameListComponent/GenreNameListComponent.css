@@ -1,0 +1,8 @@
+span{
+    margin-right: 0;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    flex-grow: 0;
+    padding: 0 5px;
+}

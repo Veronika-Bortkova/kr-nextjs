@@ -1,0 +1,35 @@
+.pagination-container{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-weight: bold;
+    cursor: pointer !important;
+    align-items: center;
+}
+.wrapperPagination{
+    margin-left: 200px;
+}
+.paginationBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    width: 1140px;
+    margin: auto;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page-item.activePage {
+    font-weight: 800 !important;
+    font-size: 25px;
+}
+
+.page-item:not(.activePage):hover {
+    font-size: 25px;
+    cursor: pointer;
+}

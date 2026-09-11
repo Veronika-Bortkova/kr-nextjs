@@ -1,5 +1,10 @@
+import type {Metadata} from "next";
 
-import "./globals.css";
+export const metadata: Metadata = {
+    title: " ALL Movies",
+    description: "ALL Movies",
+};
+
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
