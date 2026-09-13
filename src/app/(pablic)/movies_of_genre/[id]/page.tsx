@@ -35,7 +35,7 @@ const moviesOfGenrePage = async ({searchParams, params}:Props) => {
         <div>
             <div>
                 <div className={"moviesPage"}>
-                    <GenresBadgesComponent searchParams={{genreId}}/>
+                    <GenresBadgesComponent genreId={genreId}/>
                     <MovieListOfGenreComponent sort={sort} id={id} page={page}/>
                 </div>
                 <PaginationComponent currentPage={resolvedSearchParams.page ? Number(resolvedSearchParams.page) : 1} pagesFromParent={500} sort={sort || 'popularity.desc'} basePath={"/movies_of_genre/" + id}/>

@@ -2,18 +2,16 @@ import React, {FC} from 'react';
 import "./SortComponent.css"
 import Link from "next/link";
 
-type Props = {
-    searchParams: {
-        sort?: string;
-        page?: string;
-        id?: string;
-        [key: string]: string | undefined;
-    };
+type PropsType = {
+    sort?: string;
+    page?: string;
+    id?: string;
+    [key: string]: string | undefined;
     basePath: string
 }
 
-const SortComponent: FC<Props> = ({searchParams, basePath}) => {
-    const currentSort = searchParams.sort || 'popularity.desc';
+const SortComponent: FC<PropsType> = ({sort, page, id, basePath}) => {
+    const currentSort = sort || 'popularity.desc';
 
     return (
         <div className="sortBlock">

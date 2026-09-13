@@ -25,7 +25,7 @@ const ALMoviesPage  = async ({searchParams}:Props) => {
     return (
         <div>
             <div className={"moviesPage"}>
-                <GenresBadgesComponent searchParams={{ genreId }}/>
+                <GenresBadgesComponent genreId={genreId}/>
                 <MoviesListComponent page={page} sort={sort} id={id} />
             </div>
             <PaginationComponent currentPage={Number(page)} pagesFromParent={500} sort={sort} basePath={"/"} />

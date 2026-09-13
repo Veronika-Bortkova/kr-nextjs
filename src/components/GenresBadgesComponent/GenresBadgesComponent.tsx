@@ -4,12 +4,12 @@ import GenreBadgeComponent from "@/src/components/GenreBadgeComponent/GenreBadge
 import "./GenresBadgesComponent.css"
 
 type Props =  {
-    searchParams: { genreId?: string };
+     genreId?: string;
 }
 
-const GenresBadgesComponent:FC<Props> = async ({searchParams}) => {
+const GenresBadgesComponent:FC<Props> = async ({genreId}) => {
     const {genres} = await getGenres();
-    const selectedGenreId = searchParams?.genreId;
+    const selectedGenreId = genreId;
 
 
     return (

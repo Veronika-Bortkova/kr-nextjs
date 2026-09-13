@@ -2,14 +2,14 @@ import React, {FC} from 'react';
 import "./PaginationComponent.css"
 import Link from "next/link";
 
-type Props = {
+type PropsType = {
     currentPage: number;
     pagesFromParent?: number;
     sort: string;
     basePath: string
 }
 
-const PaginationComponent:FC<Props> = ({currentPage, pagesFromParent, sort = 'popularity.desc',basePath }) => {
+const PaginationComponent:FC<PropsType> = ({currentPage, pagesFromParent, sort = 'popularity.desc',basePath }) => {
     const calculatedPages = pagesFromParent || 500;
     const totalPages = calculatedPages > 500 ? 500 : calculatedPages;
     const pageNumbers: number[] = [];

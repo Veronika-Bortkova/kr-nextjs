@@ -1,7 +1,7 @@
-import React, {FC, SyntheticEvent} from 'react';
+import React, {FC} from 'react';
 import {posterUrl} from "@/src/constants/urls";
 import defaultImage from "../../imeges/placeholder.jpg";
-import "./PosterPreviewComponent..css"
+import "./PosterPreviewComponent.css"
 
 type propsType = {
     poster_path:string | null
