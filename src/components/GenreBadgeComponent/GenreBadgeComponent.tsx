@@ -12,7 +12,8 @@ const GenreBadgeComponent: FC<PropsType> = ({genre, isActive}) => {
     return (
         <>
             <li className={"badgeLi"}>
-                <Link href={"/?genreId=" + genre.id} className={isActive ? "badgeA active" : "badgeA"}>
+
+                <Link href={"/movies_of_genre/" + genre.id} className={isActive ? "badgeA active" : "badgeA"}>
                     <div className={"badge"}>{genre.name}</div>
                 </Link>
             </li>

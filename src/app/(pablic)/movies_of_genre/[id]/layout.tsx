@@ -9,7 +9,7 @@ type Props = {
     children: React.ReactNode;
 }
 
-const MoviesWithGenerPlaceholderLayout = ({ children }: Props) => {
+const moviesOfGenreLayout = ({ children }: Props) => {
     return (
         <div>
             {children}
@@ -19,4 +19,4 @@ const MoviesWithGenerPlaceholderLayout = ({ children }: Props) => {
 }
 
 
-export default MoviesWithGenerPlaceholderLayout;
+export default moviesOfGenreLayout;

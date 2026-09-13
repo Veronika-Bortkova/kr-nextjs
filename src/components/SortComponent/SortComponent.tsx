@@ -6,13 +6,14 @@ type Props = {
     searchParams: {
         sort?: string;
         page?: string;
+        id?: string;
+        [key: string]: string | undefined;
     };
     basePath: string
 }
 
 const SortComponent: FC<Props> = ({searchParams, basePath}) => {
     const currentSort = searchParams.sort || 'popularity.desc';
-
 
     return (
         <div className="sortBlock">

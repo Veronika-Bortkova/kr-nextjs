@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.moviesPage{
+    padding: 150px 50px 50px 50px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    width: 100%;
+}
+.moviesPage .stars-rating-wrapper{
+    font-size: 24px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 1140px;
+    margin: 0 auto;
+}

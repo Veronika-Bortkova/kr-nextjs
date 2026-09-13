@@ -3,23 +3,32 @@ import "./globals.css"
 import GenresBadgesComponent from "@/src/components/GenresBadgesComponent/GenresBadgesComponent";
 import MoviesListComponent from "@/src/components/MoviesListComponent/MoviesListComponent";
 import PaginationComponent from "@/src/components/PaginationComponent/PaginationComponent";
-type SearchParams = {
-    page?: string;
-    id?: string;
-    genreId?: string;
-    sort?: string
+import {getSafeParam} from "@/src/helpers/utils";
+// type SearchParams = {
+//     page?: string;
+//     id?: string;
+//     genreId?: string;
+//     sort?: string
+//
+// }
 
+type Props = {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-const ALMoviesPage  = async ({ searchParams }: { searchParams: Promise<SearchParams> }) => {
+const ALMoviesPage  = async ({searchParams}:Props) => {
     const resolvedSearchParams = await searchParams;
+    const sort = getSafeParam(resolvedSearchParams.sort, "popularity.desc");
+    const page = getSafeParam(resolvedSearchParams.page, "1");
+    const genreId = getSafeParam(resolvedSearchParams.genreId, "");
+    const id = getSafeParam(resolvedSearchParams.id, "");
     return (
         <div>
             <div className={"moviesPage"}>
-                <GenresBadgesComponent searchParams={resolvedSearchParams}/>
-                <MoviesListComponent searchParams={resolvedSearchParams}/>
+                <GenresBadgesComponent searchParams={{ genreId }}/>
+                <MoviesListComponent page={page} sort={sort} id={id} />
             </div>
-            <PaginationComponent currentPage={resolvedSearchParams.page ? Number(resolvedSearchParams.page) : 1} pagesFromParent={500} sort={resolvedSearchParams.sort || 'popularity.desc'} basePath={"/"}/>
+            <PaginationComponent currentPage={Number(page)} pagesFromParent={500} sort={sort} basePath={"/"} />
         </div>
     );
 };
