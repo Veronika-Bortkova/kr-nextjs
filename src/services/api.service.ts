@@ -32,7 +32,6 @@ export const getGenres = async ():Promise<{genres:IGenre[],genresDictionary:Reco
         genres: data.genres,
         genresDictionary: genresDictionary
     };
-
 }
 
 export const getMovieById = async (id:string):Promise<IMovie>=>{
