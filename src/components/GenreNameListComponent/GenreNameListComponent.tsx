@@ -3,16 +3,17 @@ import {getGenres} from "@/src/services/api.service";
 import "./GenreNameListComponent.css"
 import {IGenre} from "@/src/models/GenreModel";
 
+
 type propsType = {
-    genres: number[]
+    genres: IGenre[]
 }
 
-const GenreNameListComponent: FC<propsType> = async ({genres}) => {
-const {genresDictionary} = await getGenres();
+const GenreNameListComponent: FC<propsType> =  ({genres}) => {
+
 
     return (
         <>
-            {genres.map(value => <span key={value}>{genresDictionary[value]}</span>)}
+            {genres.map((genre, index) => <span key={genre.id+"-"+index}>{genre.name}</span>)}
         </>
     );
 };

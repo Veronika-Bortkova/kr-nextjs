@@ -28,15 +28,17 @@ const moviesOfGenrePage = async ({searchParams, params}:Props) => {
     const genreId = getSafeParam(resolvedSearchParams.genreId, "");
     const sort = getSafeParam(resolvedSearchParams.sort, "popularity.desc");
     const page = getSafeParam(resolvedSearchParams.page, "1");
-    const {id} = await params;
 
+    const {id} = await params;
+    const {genresDictionary} = await getGenres();
+    const nameGenre = genresDictionary[Number(id)];
 
     return (
         <div>
             <div>
                 <div className={"moviesPage"}>
                     <GenresBadgesComponent genreId={genreId}/>
-                    <MovieListOfGenreComponent sort={sort} id={id} page={page}/>
+                    <MovieListOfGenreComponent sort={sort} id={id} page={page} nameGenre={nameGenre}/>
                 </div>
                 <PaginationComponent currentPage={resolvedSearchParams.page ? Number(resolvedSearchParams.page) : 1} pagesFromParent={500} sort={sort || 'popularity.desc'} basePath={"/movies_of_genre/" + id}/>
             </div>

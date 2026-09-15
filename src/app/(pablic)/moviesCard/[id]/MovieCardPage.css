@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.moviesCardPage{
+    padding: 150px 50px 50px 50px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    width: 100%;
+}
+

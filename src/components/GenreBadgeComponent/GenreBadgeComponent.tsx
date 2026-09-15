@@ -5,15 +5,14 @@ import Link from "next/link";
 
 type PropsType = {
     genre: IGenre;
-    isActive: boolean
 }
 
-const GenreBadgeComponent: FC<PropsType> = ({genre, isActive}) => {
+const GenreBadgeComponent: FC<PropsType> = ({genre}) => {
     return (
         <>
             <li className={"badgeLi"}>
 
-                <Link href={"/movies_of_genre/" + genre.id} className={isActive ? "badgeA active" : "badgeA"}>
+                <Link href={"/movies_of_genre/" + genre.id} className={"badgeA"}>
                     <div className={"badge"}>{genre.name}</div>
                 </Link>
             </li>

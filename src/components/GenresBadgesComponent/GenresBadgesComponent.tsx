@@ -15,7 +15,7 @@ const GenresBadgesComponent:FC<Props> = async ({genreId}) => {
     return (
         <div  className={"bageList"}>
             <ul>
-                {genres.map(genre => <GenreBadgeComponent genre={genre} key={genre.id} isActive={selectedGenreId === String(genre.id)}/>)}
+                {genres.map(genre => <GenreBadgeComponent genre={genre} key={genre.id}/>)}
             </ul>
 
         </div>
