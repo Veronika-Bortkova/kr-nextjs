@@ -4,6 +4,12 @@ import GenresBadgesComponent from "@/src/components/GenresBadgesComponent/Genres
 import MoviesListComponent from "@/src/components/MoviesListComponent/MoviesListComponent";
 import PaginationComponent from "@/src/components/PaginationComponent/PaginationComponent";
 import {getSafeParam} from "@/src/helpers/utils";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: " ALL Movies",
+    description: "ALL Movies",
+};
 
 type Props = {
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
