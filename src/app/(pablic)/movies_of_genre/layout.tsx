@@ -11,7 +11,7 @@ type Props = {
 
 const MoviesWithGenerPlaceholderLayout = ({ children }: Props) => {
     return (
-        <div>
+        <div className={"main"}>
             {children}
         </div>
 
