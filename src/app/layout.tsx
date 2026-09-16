@@ -16,8 +16,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className={"main"}>
               <HeaderComponent/>
               {children}
-
-          {children}
           </div>
       </body>
     </html>

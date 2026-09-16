@@ -1,0 +1,19 @@
+.noResults{
+    font-size: 20px;
+    font-weight: bold;
+    grid-column: 1 / -1;
+    text-align: left;
+    justify-self: start;
+    width: 100%;
+
+}
+.GridMovieList{
+    flex-shrink: 0;
+    width: 1140px;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    gap: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+}

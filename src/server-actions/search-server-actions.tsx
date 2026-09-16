@@ -12,6 +12,6 @@ export async function searchAction (data: SearchformData):Promise<void>{
         throw new Error("Something went wrong!");
     }
     console.log("success", value);
-    const searchPath = "/MovieSearchdPage/" + encodeURIComponent(data.search.trim()) + "/?page=1";
+    const searchPath = "/MovieSearch/" + encodeURIComponent(data.search.trim()) + "/?page=1";
     redirect(searchPath);
 }
