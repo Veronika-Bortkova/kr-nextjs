@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
-import {getMoviesOfSearch} from "@/src/services/api.service";
 import "./MuvieListOfSearchComponent.css"
-import {IMovie, IMoviesObj} from "@/src/models/MovieModel";
+import {IMovie} from "@/src/models/MovieModel";
 import MoviesListCardComponent from "@/src/components/MoviesListCardComponent/MoviesListCardComponent";
 type Props = {
     moviesSearch: IMovie[]

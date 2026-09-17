@@ -10,7 +10,7 @@ type PropsType = {
     basePath: string
 }
 
-const SortComponent: FC<PropsType> = ({sort, page, id, basePath}) => {
+const SortComponent: FC<PropsType> = ({sort, basePath}) => {
     const currentSort = sort || 'popularity.desc';
 
     return (

@@ -37,6 +37,6 @@ a {
 }
 
 .page-item {
-    transition: transform 0.2s ease; /* Плавный переход для ховера */
+    transition: transform 0.2s ease;
     cursor: pointer;
 }

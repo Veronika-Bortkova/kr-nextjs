@@ -3,7 +3,7 @@ import GenresBadgesComponent from "@/src/components/GenresBadgesComponent/Genres
 import PaginationComponent from "@/src/components/PaginationComponent/PaginationComponent";
 import {getSafeParam} from "@/src/helpers/utils";
 import MuvieListOfSearchComponent from "@/src/components/MuvieListOfSearchComponent/MuvieListOfSearchComponent";
-import {getMovieById, getMoviesOfSearch} from "@/src/services/api.service";
+import {getMoviesOfSearch} from "@/src/services/api.service";
 import {Metadata} from "next";
 
 
